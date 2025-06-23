@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Suivi de l'élève</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f8ff;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header, footer {
+      background-color: #005b99;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+    nav ul li {
+      display: inline-block;
+      margin: 0 10px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    article {
+      margin: 20px;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #005b99;
+    }
+    aside {
+      margin-top: 20px;
+    }
+    img {
+      border-radius: 8px;
+    }
+    audio, iframe {
+      display: block;
+      margin: 20px auto;
+    }
+  </style>
+</head>
+<body>
+
+  <select id="languageSelector">
+    <option value="fr">Français</option>
+    <option value="en">English</option>
+  </select>
+
+  <a href="accueil.html">Retour à l'accueil</a>
+
+  <header>
+    <h1>Suivi de l'élève</h1>
+    <nav>
+    </nav>
+  </header>
+
+  <article>
+    <h2>Informations personnelles</h2>
+    <p><strong>Nom :</strong> Dupont</p>
+    <p><strong>Prénom :</strong> Jean</p>
+    <ul>
+      <li>Numéro étudiant : 75543902</li>
+      <li>Diplôme : Bac Pro SN</li>
+    </ul>
+    <aside>
+
+  <button onclick="toggleParcours()">Voir plus</button>
+    <div id="parcours-container">
+      <h3>Parcours scolaire</h3>
+      <ul>
+        <li>2020-2021 : Seconde - Lycée Jean Moulin, Toulouse</li>
+        <li>2021-2022 : Première SN - Lycée Jean Moulin</li>
+        <li>2022-2023 : Terminale SN - Projet de système embarqué</li>
+        <li>2023-2024 : Préparation au BTS SIO</li>
+      </ul>
+    </div>
+
+  <article>
+    <h2>Média</h2>
+    <iframe width="520" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY" title="Vidéo" frameborder="0" allowfullscreen></iframe>
+  </article>
+
+  <footer>
+    <p>Auteur : Corentin Caraminot</p>
+  </footer>
+
+</body>
+</html>

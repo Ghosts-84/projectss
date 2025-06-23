@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Inscription</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e8f0fe;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    h1, h2 {
+      text-align: center;
+      color: #002b80;
+    }
+    form {
+      background-color: #ffffff;
+      max-width: 500px;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    label {
+      font-weight: bold;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="id"],
+    input[type="date"] {
+      width: 100%;
+      padding: 8px;
+      margin: 5px 0 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    input[type="submit"] {
+      background-color: #0066cc;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: #004c99;
+    }
+    img, iframe {
+      display: block;
+      margin: 20px auto;
+    }
+  </style>
+</head>
+<body>
+
+  <select id="languageSelector">
+    <option value="fr">Français</option>
+    <option value="en">English</option>
+  </select>
+
+  <h1>Page d'inscription</h1>
+  <h2>Formulaire</h2>
+
+  <form action="suite inscription.html" method="get">
+  <label for="nom">Nom :</label><br>
+  <input type="text" id="nom" name="nom" required style="width: 100%;"><br><br>
+
+  <label for="prenom">Prénom :</label><br>
+  <input type="text" id="prenom" name="prenom" required style="width: 100%;"><br><br>
+
+  <label for="email">Email :</label><br>
+  <input type="email" id="email" name="email" required style="width: 100%;"><br><br>
+
+  <label for="id">Identifiant :</label><br>
+  <input type="id" id="id" name="id" required style="width: 100%;"><br><br>
+
+  <label for="password">Mot de passe :</label><br>
+  <input type="password" id="password" name="password" required style="width: 100%;"><br><br>
+
+  <label for="date_naissance">Date de naissance :</label><br>
+  <input type="date" id="date_naissance" name="date_naissance" required style="width: 100%;"><br><br>
+
+  <input type="submit" value="S'inscrire">
+</form>
+
+</body>
+</html>

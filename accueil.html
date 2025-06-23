@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title data-lang="title">Accueil</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4faff;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header, footer {
+      background-color: #005b99;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    nav {
+      background-color: #e0f0ff;
+      text-align: center;
+      padding: 20px;
+    }
+    nav a {
+      margin: 0 20px;
+      text-decoration: none;
+      color: #005b99;
+      font-weight: bold;
+    }
+    section {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+    select {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <select id="languageSelector">
+    <option value="fr">Français</option>
+    <option value="en">English</option>
+  </select>
+
+  <header>
+    <h1 data-lang="welcome">Bienvenue sur le portail étudiant</h1>
+    <p data-lang="intro">Accédez à votre profil, inscrivez-vous ou visualisez la confirmation.</p>
+  </header>
+
+  <nav>
+    <a href="connexion.html" data-lang="connect">Connexion</a>
+    <a href="inscription.html" data-lang="form">Inscription</a>
+    <a href="suite inscription.html" data-lang="confirm">Confirmation</a>
+  </nav>
+
+<section>
+    <h2>Présentation du site</h2>
+    <p>Ce site vous permet de gérer votre inscription, consulter vos informations personnelles et accéder à du contenu multimédia.</p>
+
+    <h2>Pourquoi ce portail ?</h2>
+    <p>Pour faciliter l'accès à vos documents, vos données personnelles et les démarches d'inscription.</p>
+    <img src="https://cdn-icons-png.flaticon.com/512/3079/3079406.png" alt="Icône info" width="150">
+  </section>
+
+  <footer>
+    <p>&copy; 2025 <span data-lang="footer">Portail Étudiant - Tous droits réservés</span></p>
+  </footer>
+
+  <script>
+    const translations = {
+      fr: {
+        title: "Accueil",
+        welcome: "Bienvenue sur le portail étudiant",
+        intro: "Accédez à votre profil, inscrivez-vous ou visualisez la confirmation.",
+        connect: "Connexion",
+        form: "Inscription",
+        confirm: "Confirmation",
+        why: "Pourquoi ce site ?",
+        desc: "Ce site vous permet de gérer votre inscription, consulter vos données personnelles et accéder à du contenu.",
+        footer: "Portail Étudiant - Tous droits réservés"
+      },
+      en: {
+        title: "Home",
+        welcome: "Welcome to the Student Portal",
+        intro: "Access your profile, sign up, or view confirmation.",
+        connect: "Login",
+        form: "Registration",
+        confirm: "Confirmation",
+        why: "Why this site?",
+        desc: "This site lets you manage your registration, view personal data and access multimedia content.",
+        footer: "Student Portal - All rights reserved"
+      }
+    };
+
+    document.getElementById("languageSelector").addEventListener("change", (e) => {
+      const lang = e.target.value;
+      document.querySelectorAll("[data-lang]").forEach(el => {
+        const key = el.getAttribute("data-lang");
+        if (translations[lang][key]) {
+          el.textContent = translations[lang][key];
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
